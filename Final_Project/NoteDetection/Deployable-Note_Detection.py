@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 # # Mid-semester assignment
 # **Student name**: Suyash Lal <br>
 # **Student ID**: 210477
