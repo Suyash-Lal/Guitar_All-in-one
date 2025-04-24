@@ -10,7 +10,7 @@ The system uses a dataset of **576 guitar chord recordings** covering **24 chord
 - The model learns to predict the most likely chord to follow a given sequence of chords
 - This approach mirrors how musicians understand chord function and resolution in music
 
-### Sequence construction
+### Sequence construction (stored in .json)
 
 How we build a training example:
 - Take three consecutive chords (A → E → F#m).
@@ -23,7 +23,7 @@ Do that for hundreds of progressions so the model sees many patterns.
 
 One of the most sophisticated aspects of the system is how it processes raw audio:
 
-1. **Enhanced Chromagram** (48 bins per octave) captures detailed pitch content
+1. **Enhanced Chromagram** (36 bins per octave) captures detailed pitch content
 2. **Harmonic-Percussive Separation** isolates harmonic content from noise/percussion
 3. **Tonnetz Features** represent harmonic relationships between notes
 4. **Spectral Contrast** captures timbral characteristics 

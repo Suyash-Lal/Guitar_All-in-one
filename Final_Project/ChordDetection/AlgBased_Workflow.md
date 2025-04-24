@@ -16,7 +16,7 @@ The system employs robust data augmentation to expand the training dataset:
 This augmentation increases dataset size by 7x per sample, enabling better generalization.
 
 ### 2. Feature Extraction
-The project uses specialized audio feature extraction optimized for chord recognition:
+The project uses specialized audio feature extraction optimized for chord recognition (saved as 2D numpy arrays):
 
 - **Chromagram Features**: High-resolution (36 bins per octave) constant-Q transform to capture pitch relationships
 - **Harmonic-Percussive Separation**: Isolates harmonic content for cleaner chord representation
@@ -36,7 +36,7 @@ Convolutional Neural Networks process grid-like data through sliding filter wind
 - **Convolutional Blocks**: Two sequential blocks each containing:
   
   - **2D Convolution** (3×3 kernels): Detects frequency patterns and harmonic structures
-  - **Batch Normalization**: Stabilizes learning by normalizing layer activations
+  - **Batch Normalization**: Stabilizes learning by normalizing layer activations (each layer has the same amount of data working through it).
   - **ReLU Activation**: Introduces non-linearity for complex pattern detection
   - **Max Pooling**: Reduces dimensions while preserving dominant frequencies
   - **Dropout (50%)**: Prevents co-adaptation of features for better generalization
